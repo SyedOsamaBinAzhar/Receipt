@@ -7,10 +7,14 @@ td{
 }
 th{
         border-right:1px solid black ;
+        
+
 }
 table{
-    height: 60%;
-    font-size: 2rem;
+    height: 80%;
+    font-size: 3rem;
+    margin-top: 10px;
+    
 }
 table li{
     list-style: none;

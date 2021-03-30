@@ -5,11 +5,210 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reciept</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="recieptHeader.css">
-    <link rel="stylesheet" href="barcodeRow.css">
-    <link rel="stylesheet" href="recieptContent.css">
 
+
+
+    <style>
+      *{
+    border: 0;
+    margin: 0;
+    padding: 0%;
+}
+html{
+    font-size: 62.5%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col{
+    display: flex;
+    flex-flow: column;
+}
+
+.recieptContainer{
+    display: grid;
+    grid-template-rows: minmax(20vh,min-content) minmax(80vh,min-content) minmax(30vh,min-content);
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-areas: ". recieptHeader ."
+                        ". recieptContent ."
+                        ". barcodeRow .";
+}
+.recieptHeader{
+    grid-area: recieptHeader;
+}
+.recieptContent{
+    grid-area: recieptContent;
+}
+.barcodeRow{
+    grid-area: barcodeRow;
+}
+
+.recieptHeader{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "recieptHeaderCol1 recieptHeaderCol2";
+}
+.recieptHeaderCol1{
+    grid-area: recieptHeaderCol1;
+    position: relative;
+}
+.recieptHeaderCol2{
+    grid-area: recieptHeaderCol2;
+    position: relative;
+}
+
+.recieptHeaderCol1Content{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.recieptHeaderCol1Content h3{
+ font-size: 3.5rem;
+ font-family: Arial, Helvetica, sans-serif;
+ letter-spacing: 1px;
+
+}
+.recieptHeaderCol1Content p{
+    font-size: 1.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    
+}
+
+
+.recieptHeaderCol2Content{
+    position: absolute;
+    top: 10%;
+    right: 20%;
+}
+.recieptHeaderCol2Content h4{
+    font-size: 2.5rem;
+ font-family: Arial, Helvetica, sans-serif;
+ letter-spacing: 1px;
+ margin-top: 5px;
+}
+
+@media screen and (max-width: 650px) {
+    .recieptHeaderCol1Content h3{
+        font-size: 3rem;
+       
+       }
+       .recieptHeaderCol1Content p{
+           font-size: 1.3rem;
+           
+       }
+       .recieptHeaderCol2Content h4{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .recieptHeaderCol1Content h3{
+        font-size: 2.5rem;
+       
+       }
+       .recieptHeaderCol1Content p{
+           font-size: 1rem;
+           
+       }
+       .recieptHeaderCol2Content h4{
+        font-size: 1.5rem;
+    }
+}
+
+table {
+    border: 1px solid black;
+    /* background-color: blue; */
+    /* width: 100%; */
+}
+td{
+    border-top: 1px solid black;
+    border-right:1px solid black ;
+}
+th{
+        border-right:1px solid black ;
+        
+
+}
+table{
+    height: 80%;
+    font-size: 3rem;
+    margin-top: 10px;
+    
+}
+table li{
+    list-style: none;
+}
+.recieptContent{
+    text-align:left;
+}
+
+.recieptContent h3{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.recieptContent p{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    table{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    table{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 850px) {
+    table{
+        font-size: 1.5rem;
+    }
+}
+ @media screen and (max-width: 550px) {
+    table{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 450px) {
+  .responsiveTxt{
+        font-size: 1rem;
+    }
+}
+
+.barcodeRow p{
+ font-size: 1.5rem;
+}
+.barcodeRow{
+    margin-top: 20px;
+}
+.img{
+    width: 90vw;
+    height: 25vh;
+}
+.barcodeTxt {font-size: 6rem;}
+
+@media screen and (max-width: 650px) {
+    .barcodeTxt {
+        font-size: 4rem;
+        /* width: 100%; */
+    }
+}
+@media screen and (max-width: 510px) {
+    .barcodeTxt {
+        font-size: 3rem;
+    }
+}
+    </style>
+   
 
 </head>
 <body>
@@ -40,13 +239,11 @@
                 <!-- //first row -->
                 <tr>
                   <th>Quantity</th>
-                  <th>Item Name</th> 
-                  <th>EKU</th>
-                  <th>Location</th>
-                  <th>Shipped</th>
-                  <th>This Shipment</th>
-                  <th>To Follow</th>
-
+                  <th>_orderRef_</th> 
+                  <th>_deliveryAddress_</th>
+                  <th>_orderRef_</th>
+                  <th>_channelName_</th>
+                  <th>_date_</th>
 
                 </tr>
 
@@ -99,29 +296,24 @@
                 </tr>
               </table>
 
-              <h3>Total Items on this order : 3</h3>
-              <p>Method Shipment : cheapest method</p>
-              <p>Notes: Hello</p>
+              <p ><strong><span>Total Items on This Order</span><span>:</span></strong><span class="responsiveTxt">_totalItems_</span></p>
+              <p><span><strong><span style="font-size: medium;">Method:</span></strong>&nbsp;<span class="responsiveTxt">_shipMethodName_</span></span></p>
+              <p><span style="font-size: large;"><strong>Notes</strong>:<strong class="responsiveTxt">_PCF_NOTESTO_</strong></span></p>
         </div>
 
 
-        <div class="barcodeRow flex flex-col">
-            <div style='text-align: center;'>
-                <!-- insert your custom barcode setting your data in the GET parameter "data" -->
-                <img alt='Barcode Generator TEC-IT'
-                     src='https://barcode.tec-it.com/barcode.ashx?data=ABC-abc-1234&code=Code128'/>
-              </div>
-              <div style='padding-top:8px; text-align:center; font-size:15px; font-family: Source Sans Pro, Arial, sans-serif;'>
-                <!-- back-linking to www.tec-it.com is required -->
-                <a href='https://www.tec-it.com' title='Barcode Software by TEC-IT' target='_blank'>
-                </a>
-              </div>
+        <div class="barcodeRow">
 
-        <p style="color: red;">How do I have to display orders over here?</p>
+        <div >
+          <img class="img" src="./image/download.png">
+          <p  style="text-align: center;"><span><span class="barcodeTxt">_GNshortbarcode_</span></span></p>
+        </div>
+
+        <!-- <p style="color: red;">How do I have to display orders over here?</p>
         <p>Order : ItemName</p>
         <p>Order : ItemName</p>
         <p>Order : ItemName</p>
-        <p>Order : ItemName</p>
+        <p>Order : ItemName</p> -->
 
 
         </div>

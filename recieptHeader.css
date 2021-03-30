@@ -1,17 +1,14 @@
-.recieptHeader{
+/* .recieptHeader{
     display: grid;
     grid-template-columns: 50% 50%;
-    /* background-color: blue; */
     grid-template-areas: "recieptHeaderCol1 recieptHeaderCol2";
 }
 .recieptHeaderCol1{
     grid-area: recieptHeaderCol1;
-    /* background-color: cadetblue; */
     position: relative;
 }
 .recieptHeaderCol2{
     grid-area: recieptHeaderCol2;
-    /* background-color: chocolate; */
     position: relative;
 }
 
@@ -72,4 +69,4 @@
        .recieptHeaderCol2Content h4{
         font-size: 1.5rem;
     }
-}
+} */
