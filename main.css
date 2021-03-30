@@ -1,0 +1,38 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0%;
+}
+html{
+    font-size: 62.5%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col{
+    display: flex;
+    flex-flow: column;
+}
+
+.recieptContainer{
+    display: grid;
+    grid-template-rows: minmax(20vh,min-content) minmax(70vh,min-content) minmax(30vh,min-content);
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-areas: ". recieptHeader ."
+                        ". recieptContent ."
+                        ". barcodeRow .";
+}
+.recieptHeader{
+    grid-area: recieptHeader;
+    /* background-color: aqua; */
+}
+.recieptContent{
+    grid-area: recieptContent;
+    /* background-color: aquamarine; */
+}
+.barcodeRow{
+    grid-area: barcodeRow;
+    /* background-color: lightblue; */
+}

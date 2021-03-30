@@ -1,0 +1,52 @@
+table {
+    border: 1px solid black;
+}
+td{
+    border-top: 1px solid black;
+    border-right:1px solid black ;
+}
+th{
+        border-right:1px solid black ;
+}
+table{
+    height: 60%;
+    font-size: 2rem;
+}
+table li{
+    list-style: none;
+}
+.recieptContent{
+    text-align:left;
+}
+
+.recieptContent h3{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.recieptContent p{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    table{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    table{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 650px) {
+ .recieptContent h3{
+    font-size: 1.5rem;
+ }
+ .recieptContent p{
+    font-size: 1rem;
+ }
+}

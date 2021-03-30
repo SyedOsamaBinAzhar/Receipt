@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciept</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="recieptHeader.css">
+    <link rel="stylesheet" href="barcodeRow.css">
+    <link rel="stylesheet" href="recieptContent.css">
+
+
+</head>
+<body>
+    <div class="recieptContainer">
+        <!-- separate file for reciept Header styling -->
+        <div class="recieptHeader">
+            <div class="recieptHeaderCol1">
+                <div class="recieptHeaderCol1Content">
+                    <h3>339306/01</h3>
+                    <p>James Hamilton</p>
+                    <p>Menora WA 6050</p>
+                    <p>Australia</p>
+
+                </div>
+            </div>
+            <div class="recieptHeaderCol2">
+                <div class="recieptHeaderCol2Content">
+                    <h4>339306/01</h4>
+                    <h4>Phone/Email</h4>
+                    <h4>5 March 2021</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="recieptContent flex flex-col">
+            <table style="width:80%">
+                <!-- //first row -->
+                <tr>
+                  <th>Quantity</th>
+                  <th>Item Name</th> 
+                  <th>EKU</th>
+                  <th>Location</th>
+                  <th>Shipped</th>
+                  <th>This Shipment</th>
+                  <th>To Follow</th>
+
+
+                </tr>
+
+                <!-- second row -->
+                <tr>
+                  <td>1</td>
+                  <td>
+                      <li>abc</li>
+                      <li>abc</li>
+                      <li>abc</li>
+                      <li>abc</li>
+
+                  </td>
+                  <td>KP114</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+
+                </tr>
+
+                <!-- third row -->
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <li>abc</li>
+                    <li>abc</li>
+                    <li>abc</li>
+                  </td>
+                  <td>94</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+                <!-- fourth row -->
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <li>abc</li>
+                    <li>abc</li>
+                    <li>abc</li>
+                  </td>
+                  <td>80</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+
+              <h3>Total Items on this order : 3</h3>
+              <p>Method Shipment : cheapest method</p>
+              <p>Notes: Hello</p>
+        </div>
+
+
+        <div class="barcodeRow flex flex-col">
+            <div style='text-align: center;'>
+                <!-- insert your custom barcode setting your data in the GET parameter "data" -->
+                <img alt='Barcode Generator TEC-IT'
+                     src='https://barcode.tec-it.com/barcode.ashx?data=ABC-abc-1234&code=Code128'/>
+              </div>
+              <div style='padding-top:8px; text-align:center; font-size:15px; font-family: Source Sans Pro, Arial, sans-serif;'>
+                <!-- back-linking to www.tec-it.com is required -->
+                <a href='https://www.tec-it.com' title='Barcode Software by TEC-IT' target='_blank'>
+                </a>
+              </div>
+
+        <p style="color: red;">How do I have to display orders over here?</p>
+        <p>Order : ItemName</p>
+        <p>Order : ItemName</p>
+        <p>Order : ItemName</p>
+        <p>Order : ItemName</p>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
